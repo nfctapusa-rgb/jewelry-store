@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f3f1">
+  <meta name="description" content="Jewelry repair and custom jewelry by Izmirlian Jewelry at 608 S Hill Street in Downtown Los Angeles. Call (626) 510-3734 or shop online on Etsy.">
+  <title>Izmirlian Jewelry — Downtown Los Angeles</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f2f3f1;
+      --white: #fff;
+      --ink: #191d20;
+      --muted: #626a70;
+      --line: #cfd3d1;
+      --blue: #183fc5;
+      --blue-dark: #102d91;
+      --max: 1320px;
+      --gutter: clamp(22px, 5vw, 76px);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 "Avenir Next", Avenir, "Segoe UI", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--blue); }
+    :focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+    .wrap { width: min(var(--max), calc(100% - var(--gutter) * 2)); margin-inline: auto; }
+    .skip { position: absolute; z-index: 20; top: 8px; left: 8px; padding: 10px 14px; transform: translateY(-150%); background: var(--ink); color: var(--white); }
+    .skip:focus { transform: translateY(0); }
+    .notice { min-height: 34px; display: flex; align-items: center; justify-content: center; padding: 5px 16px; background: var(--blue); color: var(--white); text-align: center; font-size: 11px; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; }
+    header { position: sticky; z-index: 10; top: 0; background: rgb(242 243 241 / 96%); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .wordmark { display: flex; align-items: center; gap: 11px; font-size: 14px; font-weight: 750; letter-spacing: .035em; }
+    .mark { width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--blue); color: var(--blue); font-size: 14px; font-weight: 600; }
+    nav { display: flex; align-items: center; gap: clamp(18px, 3vw, 40px); font-size: 13px; font-weight: 550; }
+    .nav-cta, .button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 11px 17px; border: 1px solid var(--blue); color: var(--white); background: var(--blue); font-size: 13px; font-weight: 650; transition: background-color .16s ease, color .16s ease; }
+    .nav-cta:hover, .button:hover { color: var(--white); background: var(--blue-dark); border-color: var(--blue-dark); }
+    .button.light { color: var(--blue); background: transparent; }
+    .button.light:hover { color: var(--white); background: var(--blue); }
+    .arrow { width: 17px; height: 17px; display: inline-grid; place-items: center; font-size: 18px; line-height: 1; }
+    main { overflow: clip; }
+    .hero { padding-block: clamp(34px, 5vw, 72px) clamp(64px, 8vw, 112px); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(330px, .88fr); gap: clamp(26px, 6vw, 86px); align-items: center; }
+    .hero-art { min-height: 490px; position: relative; display: grid; grid-template-columns: 1.16fr .84fr; grid-template-rows: 1fr .72fr; gap: 10px; }
+    .hero-art figure { min-width: 0; min-height: 0; margin: 0; overflow: hidden; background: var(--white); }
+    .hero-art .hero-main { grid-row: 1 / 3; }
+    .hero-art img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-art img { object-fit: contain; }
+    .hero-art .hero-main img { object-position: center; }
+    .hero-art .detail img, .hero-art .alternate img { object-position: center; }
+    .hero-copy { max-width: 510px; padding-block: 18px; }
+    .eyebrow { margin: 0 0 18px; color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 520px; margin-bottom: 20px; font-size: clamp(47px, 6.3vw, 86px); font-weight: 620; letter-spacing: -.075em; line-height: .99; }
+    h1 span { color: var(--blue); }
+    .hero-copy > p:not(.eyebrow) { max-width: 390px; margin-bottom: 25px; color: var(--muted); font-size: 16px; line-height: 1.75; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .hero-place { display: flex; align-items: center; gap: 12px; margin-top: 35px; padding-top: 17px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    .hero-place strong { color: var(--ink); font-weight: 650; }
+    .hero-place .dot { width: 5px; height: 5px; flex: 0 0 5px; border-radius: 50%; background: var(--blue); }
+    section { padding-block: clamp(68px, 9vw, 120px); }
+    .work { background: var(--white); }
+    .section-heading { max-width: 720px; margin-bottom: 38px; }
+    .section-heading h2 { margin-bottom: 12px; font-size: clamp(34px, 4.4vw, 58px); font-weight: 600; letter-spacing: -.065em; line-height: 1.05; }
+    .section-heading p { max-width: 510px; margin: 0; color: var(--muted); }
+    .product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 16px; row-gap: 34px; }
+    .product-card { min-width: 0; display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+    .product-photo { display: block; aspect-ratio: 1; overflow: hidden; background: var(--paper); }
+    .product-photo img { width: 100%; height: 100%; object-fit: contain; transition: transform .22s ease; }
+    .product-card:hover .product-photo img { transform: scale(1.035); }
+    .product-meta { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding-top: 12px; }
+    .product-name { max-width: 250px; margin: 0; font-size: 14px; font-weight: 620; line-height: 1.35; }
+    .product-price { flex: 0 0 auto; color: var(--blue); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .product-link { display: inline-flex; align-items: center; gap: 7px; align-self: flex-start; margin-top: 9px; color: var(--muted); font-size: 11px; font-weight: 650; }
+    .product-link:hover { color: var(--blue); }
+    .catalog-note { margin: 30px 0 0; color: var(--muted); font-size: 12px; }
+    .catalog-note a { color: var(--blue); font-weight: 650; }
+    .text-arrow { display: inline-flex; align-items: center; gap: 12px; color: var(--blue); font-size: 13px; font-weight: 700; }
+    .text-arrow:hover { color: var(--blue-dark); }
+    .services { display: grid; grid-template-columns: .84fr 1.16fr; gap: clamp(38px, 9vw, 130px); }
+    .services h2 { max-width: 430px; margin-bottom: 16px; font-size: clamp(36px, 4.5vw, 60px); font-weight: 600; letter-spacing: -.065em; line-height: 1.02; }
+    .services-intro p { max-width: 390px; color: var(--muted); }
+    .service-rows { border-top: 1px solid var(--line); }
+    .service-row { display: grid; grid-template-columns: 38px 1fr; gap: 20px; padding: 23px 0; border-bottom: 1px solid var(--line); }
+    .service-row .index { color: var(--blue); font-variant-numeric: tabular-nums; font-size: 12px; }
+    .service-row h3 { margin-bottom: 5px; font-size: 19px; font-weight: 650; }
+    .service-row p { max-width: 480px; margin: 0; color: var(--muted); font-size: 14px; }
+    .reviews { color: var(--white); background: var(--ink); }
+    .reviews .section-heading h2 { max-width: 540px; }
+    .reviews .section-heading p { color: #bdc3c6; }
+    .rating { display: flex; align-items: baseline; gap: 14px; margin-bottom: 30px; }
+    .rating strong { color: #fff; font-size: 44px; font-weight: 600; letter-spacing: -.06em; }
+    .rating span { color: #c4cbd0; font-size: 13px; }
+    .review-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 42px 76px; }
+    .review { padding-top: 17px; border-top: 1px solid #596066; }
+    .review:first-child { grid-row: span 2; }
+    .review blockquote { margin: 0 0 16px; font-size: clamp(18px, 2vw, 23px); letter-spacing: -.02em; line-height: 1.5; }
+    .review:first-child blockquote { max-width: 600px; font-size: clamp(24px, 3.15vw, 42px); letter-spacing: -.045em; line-height: 1.26; }
+    .review cite { color: #bfc6cb; font-size: 12px; font-style: normal; }
+    .review-source { margin: 30px 0 0; color: #aeb7bd; font-size: 12px; }
+    .visit { background: #e5e8e8; }
+    .visit-grid { display: grid; grid-template-columns: 1fr .88fr; gap: clamp(40px, 10vw, 140px); align-items: center; }
+    .visit h2 { max-width: 520px; margin-bottom: 19px; font-size: clamp(38px, 5.5vw, 70px); font-weight: 600; letter-spacing: -.07em; line-height: 1.01; }
+    .visit p { max-width: 420px; color: var(--muted); }
+    address { margin: 25px 0; font-size: 18px; font-style: normal; font-weight: 620; line-height: 1.55; }
+    .visit-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .address-art { min-height: 300px; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(25px, 4vw, 46px); color: var(--white); background: var(--blue); }
+    .address-art .street { margin: 0; color: rgb(255 255 255 / 82%); font-size: 11px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; }
+    .address-art strong { display: block; max-width: 380px; font-size: clamp(38px, 5vw, 62px); font-weight: 560; letter-spacing: -.06em; line-height: .98; }
+    .address-art a { align-self: flex-start; display: inline-flex; gap: 12px; align-items: center; padding-bottom: 5px; border-bottom: 1px solid rgb(255 255 255 / 55%); font-size: 13px; }
+    footer { padding-block: 27px calc(27px + env(safe-area-inset-bottom)); color: var(--muted); font-size: 12px; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .footer-row p { margin: 0; }
+    .footer-links { display: flex; gap: 23px; }
+    .mobilebar { display: none; }
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: 1fr .86fr; gap: 28px; }
+      .hero-art { min-height: 420px; }
+      .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 27px 13px; }
+      .review-grid { gap: 32px; }
+    }
+    @media (max-width: 680px) {
+      html { scroll-padding-top: 68px; }
+      .notice { min-height: 31px; font-size: 9px; letter-spacing: .08em; }
+      .nav { min-height: 64px; }
+      nav { display: none; }
+      .nav-cta { min-height: 40px; padding: 9px 12px; font-size: 12px; }
+      .hero { padding-top: 25px; padding-bottom: 68px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 27px; }
+      .hero-art { min-height: 390px; order: 2; }
+      .hero-copy { max-width: none; order: 1; padding: 0; }
+      .eyebrow { margin-bottom: 13px; }
+      h1 { max-width: 500px; margin-bottom: 14px; font-size: clamp(46px, 12vw, 68px); }
+      .hero-copy > p:not(.eyebrow) { margin-bottom: 18px; font-size: 15px; }
+      .hero-place { margin-top: 22px; }
+      section { padding-block: 67px; }
+      .section-heading { margin-bottom: 27px; }
+      .section-heading h2 { font-size: 38px; }
+      .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 10px; }
+      .product-name { font-size: 12px; }
+      .product-price { font-size: 12px; }
+      .services, .visit-grid { grid-template-columns: 1fr; gap: 28px; }
+      .services h2 { font-size: 42px; }
+      .service-row { padding-block: 18px; }
+      .review-grid { grid-template-columns: 1fr; gap: 24px; }
+      .review:first-child { grid-row: auto; }
+      .review:first-child blockquote { font-size: 30px; }
+      .rating { margin-bottom: 23px; }
+      .address-art { min-height: 245px; }
+      .address-art strong { font-size: 46px; }
+      .footer-row { align-items: flex-start; flex-direction: column; gap: 16px; }
+      .mobilebar { position: fixed; z-index: 15; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 9px 12px calc(9px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); background: var(--paper); }
+      .mobilebar .button { width: 100%; min-height: 44px; padding: 9px 10px; }
+      footer { padding-bottom: 91px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="notice">Downtown Los Angeles · Jewelry District · Suite 1012</div>
+  <header>
+    <div class="wrap nav">
+      <a class="wordmark" href="#top" aria-label="Izmirlian Jewelry home"><span class="mark" aria-hidden="true">I</span><span>IZMIRLIAN JEWELRY</span></a>
+      <nav aria-label="Main navigation"><a href="#work">Custom work</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav>
+      <a class="nav-cta" href="tel:+16265103734">Call the shop <span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main id="main">
+    <div id="top"></div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-art" aria-label="Selected rings from the shop">
+          <figure class="hero-main"><img src="assets/products/01-oval-teal-gemstone-halo-ring.avif" alt="Oval teal gemstone halo ring" fetchpriority="high"></figure>
+          <figure class="detail"><img src="assets/products/06-rose-gold-amethyst-diamond-halo.webp" alt="Rose-gold amethyst and diamond halo ring" loading="lazy"></figure>
+          <figure class="alternate"><img src="assets/products/07-blue-topaz-double-halo-diamond-ring.jpg" alt="Blue topaz double halo diamond ring in 14K gold" loading="lazy"></figure>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Jewelry repair · Custom pieces</p>
+          <h1 id="hero-title">Jewelry repair.<br><span>Custom pieces.</span></h1>
+          <p>Talk with Harout about a repair or custom piece at 608 S Hill Street, suite 1012.</p>
+          <div class="hero-actions"><a class="button" href="tel:+16265103734">Call (626) 510-3734 <span class="arrow" aria-hidden="true">↗</span></a><a class="button light" href="https://www.etsy.com/shop/jewelsbychriss/?etsrc=sdt" target="_blank" rel="noopener">Shop on Etsy <span class="arrow" aria-hidden="true">↗</span></a></div>
+          <div class="hero-place"><span class="dot" aria-hidden="true"></span><strong>608 S Hill St, Suite 1012</strong><span>Los Angeles, CA</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-heading"><h2 id="work-title">Rings from the shop.</h2><p>Browse a selection of Harout’s ring designs. Choose a piece to find it in the Jewels by Chriss Etsy shop.</p></div>
+        <div class="product-grid">
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Oval+Teal+Gemstone+Halo+Ring" target="_blank" rel="noopener"><img src="assets/products/01-oval-teal-gemstone-halo-ring.avif" alt="Oval teal gemstone halo ring" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Oval Teal Gemstone Halo Ring</h3><span class="product-price">$4,372.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Oval+Teal+Gemstone+Halo+Ring" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Green+Emerald+Natural+Diamond+14K+Solid+Gold" target="_blank" rel="noopener"><img src="assets/products/02-green-emerald-natural-diamond-ring.avif" alt="Green emerald and natural small diamond ring in 14K solid gold" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Green Emerald &amp; Natural Small Diamond Ring in 14K Solid Gold</h3><span class="product-price">$2,375.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Green+Emerald+Natural+Diamond+14K+Solid+Gold" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Green+Tourmaline+Diamond+Halo+14K+Gold" target="_blank" rel="noopener"><img src="assets/products/03-green-tourmaline-diamond-halo-ring.avif" alt="Green tourmaline and diamond halo ring in 14K gold" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Green Tourmaline &amp; Diamond Halo Ring</h3><span class="product-price">$3,300.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Green+Tourmaline+Diamond+Halo+14K+Gold" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Lab-Grown+Diamond+Cluster+Ring+White+Gold+557" target="_blank" rel="noopener"><img src="assets/products/04-lab-grown-cluster-white-gold-557.avif" alt="Lab-grown diamond cluster ring in 14K white gold" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Lab-Grown Diamond Cluster Ring</h3><span class="product-price">$557.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Lab-Grown+Diamond+Cluster+Ring+White+Gold+557" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Twin+Lab+Diamond+Duo+Ring" target="_blank" rel="noopener"><img src="assets/products/05-twin-lab-diamond-duo-ring.avif" alt="Twin lab diamond duo ring" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Twin Lab Diamond Duo Ring</h3><span class="product-price">$435.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Twin+Lab+Diamond+Duo+Ring" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Rose+Gold+Amethyst+Diamond+Halo+Ring" target="_blank" rel="noopener"><img src="assets/products/06-rose-gold-amethyst-diamond-halo.webp" alt="14K rose-gold amethyst and diamond halo ring" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Rose-Gold Amethyst &amp; Diamond Halo</h3><span class="product-price">$3,360.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Rose+Gold+Amethyst+Diamond+Halo+Ring" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Blue+Topaz+Double+Halo+Diamond+Ring+14K+Gold" target="_blank" rel="noopener"><img src="assets/products/07-blue-topaz-double-halo-diamond-ring.jpg" alt="Blue topaz double halo diamond ring in 14K gold" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Blue Topaz Double Halo Diamond Ring</h3><span class="product-price">$3,662.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Blue+Topaz+Double+Halo+Diamond+Ring+14K+Gold" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Delicate+Diamond+Cluster+Ring+14K+White+Gold" target="_blank" rel="noopener"><img src="assets/products/08-delicate-diamond-cluster-white-gold.webp" alt="Delicate diamond cluster ring in 14K white gold" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Delicate Diamond Cluster Ring</h3><span class="product-price">$537.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Delicate+Diamond+Cluster+Ring+14K+White+Gold" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Lab+Diamond+Cluster+Ring+14K+Gold+860" target="_blank" rel="noopener"><img src="assets/products/09-lab-diamond-cluster-14k-gold.webp" alt="Lab diamond cluster ring in 14K gold" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Lab Diamond Cluster Ring in 14K Gold</h3><span class="product-price">$860.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Lab+Diamond+Cluster+Ring+14K+Gold+860" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Dainty+Lab+Diamond+Band+14K+Gold" target="_blank" rel="noopener"><img src="assets/products/10-dainty-lab-diamond-band.webp" alt="Dainty lab diamond band in 14K gold" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Dainty Lab Diamond Band</h3><span class="product-price">$487.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Dainty+Lab+Diamond+Band+14K+Gold" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Lab-Grown+Diamond+Cluster+Ring+White+Gold+572" target="_blank" rel="noopener"><img src="assets/products/11-lab-grown-cluster-white-gold-572.webp" alt="Lab-grown diamond cluster ring in 14K white gold" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Lab-Grown Diamond Cluster Ring</h3><span class="product-price">$572.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Lab-Grown+Diamond+Cluster+Ring+White+Gold+572" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=35-Stone+Sparkling+Band+14K+White+Gold" target="_blank" rel="noopener"><img src="assets/products/12-35-stone-sparkling-band-white-gold.jpg" alt="35-stone sparkling band in 14K white gold" loading="lazy"></a><div class="product-meta"><h3 class="product-name">35-Stone Sparkling Band</h3><span class="product-price">$1,092.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=35-Stone+Sparkling+Band+14K+White+Gold" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Trio+Lab+Diamond+Gold+Ring" target="_blank" rel="noopener"><img src="assets/products/13-trio-lab-diamond-gold-ring.jpg" alt="Trio lab diamond gold ring" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Trio Lab Diamond Gold Ring</h3><span class="product-price">$505.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Trio+Lab+Diamond+Gold+Ring" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Multi-Row+Lab+Diamond+Ring+14K+White+Gold" target="_blank" rel="noopener"><img src="assets/products/14-multi-row-lab-diamond-white-gold.jpg" alt="Multi-row lab diamond ring in 14K white gold" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Multi-Row Lab Diamond Ring</h3><span class="product-price">$1,170.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Multi-Row+Lab+Diamond+Ring+14K+White+Gold" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Luxe+Halo+Diamond+Ring+Rose+Gold" target="_blank" rel="noopener"><img src="assets/products/15-luxe-halo-diamond-rose-gold.webp" alt="Luxe halo diamond ring in rose gold" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Luxe Halo Diamond Ring in Rose Gold</h3><span class="product-price">$557.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Luxe+Halo+Diamond+Ring+Rose+Gold" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Twist+of+Brilliance+Yellow+Gold+Diamond+Ring" target="_blank" rel="noopener"><img src="assets/products/16-twist-of-brilliance-yellow-gold.webp" alt="Twist of Brilliance yellow gold diamond ring" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Twist of Brilliance Yellow Gold Diamond Ring</h3><span class="product-price">See Etsy</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Twist+of+Brilliance+Yellow+Gold+Diamond+Ring" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Yellow+Gold+Diamond+Halo+Open+Circle+Ring" target="_blank" rel="noopener"><img src="assets/products/17-yellow-gold-halo-open-circle.webp" alt="Yellow gold diamond halo open circle ring" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Yellow Gold Diamond Halo Open Circle Ring</h3><span class="product-price">$570.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Yellow+Gold+Diamond+Halo+Open+Circle+Ring" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Rose+Gold+Double-Band+Diamond+Accent+Ring" target="_blank" rel="noopener"><img src="assets/products/18-rose-gold-double-band-diamond-accent.webp" alt="Rose-gold double-band diamond accent ring" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Rose Gold Double-Band Diamond Accent Ring</h3><span class="product-price">$787.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Rose+Gold+Double-Band+Diamond+Accent+Ring" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Two-Stone+Diamond+Twist+Ring+White+Gold" target="_blank" rel="noopener"><img src="assets/products/19-two-stone-diamond-twist-white-gold-892.webp" alt="Two-stone diamond twist ring in white gold, first listing" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Two-Stone Diamond Twist Ring in White Gold</h3><span class="product-price">$892.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Two-Stone+Diamond+Twist+Ring+White+Gold" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Rose+Gold+Infinity+Knot+Diamond+Ring" target="_blank" rel="noopener"><img src="assets/products/20-rose-gold-infinity-knot-diamond-ring.webp" alt="Rose-gold infinity knot diamond ring" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Rose Gold Infinity Knot Diamond Ring</h3><span class="product-price">$532.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Rose+Gold+Infinity+Knot+Diamond+Ring" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Two-Stone+Diamond+Twist+Ring+White+Gold" target="_blank" rel="noopener"><img src="assets/products/21-two-stone-diamond-twist-white-gold-752.webp" alt="Two-stone diamond twist ring in white gold, second listing" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Two-Stone Diamond Twist Ring in White Gold</h3><span class="product-price">$752.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Two-Stone+Diamond+Twist+Ring+White+Gold" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Elegant+Gold+Dual-Band+Ring+Sparkling+Diamonds" target="_blank" rel="noopener"><img src="assets/products/22-elegant-gold-dual-band-ring.webp" alt="Elegant gold dual-band ring with sparkling diamonds" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Elegant Gold Dual-Band Ring</h3><span class="product-price">$665.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Elegant+Gold+Dual-Band+Ring+Sparkling+Diamonds" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Rose+Gold+Intertwined+Diamond+Band+Ring" target="_blank" rel="noopener"><img src="assets/products/23-rose-gold-intertwined-diamond-band.webp" alt="Rose-gold intertwined diamond band ring" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Rose Gold Intertwined Diamond Band</h3><span class="product-price">$592.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Rose+Gold+Intertwined+Diamond+Band+Ring" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+          <article class="product-card"><a class="product-photo" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Elegant+Gold+Open-Frame+Ring" target="_blank" rel="noopener"><img src="assets/products/24-elegant-gold-open-frame-ring-back.webp" alt="Elegant gold open-frame ring, back view" loading="lazy"></a><div class="product-meta"><h3 class="product-name">Elegant Gold Open-Frame Ring · Back View</h3><span class="product-price">$775.00</span></div><a class="product-link" href="https://www.etsy.com/shop/jewelsbychriss?search_query=Elegant+Gold+Open-Frame+Ring" target="_blank" rel="noopener">Find on Etsy <span class="arrow" aria-hidden="true">↗</span></a></article>
+        </div>
+        <p class="catalog-note">Prices are shown as provided and may change. Check the <a href="https://www.etsy.com/shop/jewelsbychriss/?etsrc=sdt" target="_blank" rel="noopener">Etsy shop</a> for current pricing, availability, and order details.</p>
+      </div>
+    </section>
+    <section id="services" aria-labelledby="services-title">
+      <div class="wrap services">
+        <div class="services-intro"><h2 id="services-title">Jewelry services in the District.</h2><p>Call or stop by to talk with Harout about a repair or a custom design.</p><a class="text-arrow" href="tel:+16265103734">Call the shop <span class="arrow" aria-hidden="true">↗</span></a></div>
+        <div class="service-rows">
+          <article class="service-row"><span class="index">01</span><div><h3>Jewelry repair</h3><p>Have a piece that needs attention? Call or stop by the Jewelry District shop to discuss it.</p></div></article>
+          <article class="service-row"><span class="index">02</span><div><h3>Custom jewelry</h3><p>Customers mention custom pieces made to their specifications. Bring your idea and talk through the details with Harout.</p></div></article>
+          <article class="service-row"><span class="index">03</span><div><h3>Shop online</h3><p>Explore rings and made-to-order designs through Jewels by Chriss on Etsy.</p></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="wrap">
+        <div class="section-heading"><h2 id="reviews-title">Google reviews.</h2><p>Recent customers mention custom work, attentive service, and quick turnaround.</p></div>
+        <div class="rating"><strong>5.0</strong><span>Google rating · 7 reviews</span></div>
+        <div class="review-grid">
+          <figure class="review"><blockquote>“He did his best to make sure my custom jewelry was exactly what I wanted down to the last detail.”</blockquote><figcaption><cite>Jonnelle Cato · Google review</cite></figcaption></figure>
+          <figure class="review"><blockquote>“I recommend Harout, great customer service and very talented.”</blockquote><figcaption><cite>Mirna M · Google review</cite></figcaption></figure>
+          <figure class="review"><blockquote>“Best jewelry in town, quick service and best prices!!!”</blockquote><figcaption><cite>Hagop Markarian · Google review</cite></figcaption></figure>
+        </div>
+        <p class="review-source">Read or leave a review on <a class="text-arrow" href="https://www.google.com/maps/search/?api=1&query=Izmirlian+Jewelry%2C+608+S+Hill+St%2C+Los+Angeles%2C+CA+90014" target="_blank" rel="noopener">Google <span class="arrow" aria-hidden="true">↗</span></a></p>
+      </div>
+    </section>
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="wrap visit-grid">
+        <div><h2 id="visit-title">Visit the Jewelry District shop.</h2><p>Located at 608 S Hill Street, suite 1012, in Downtown Los Angeles.</p><address>608 S Hill St #1012<br>Los Angeles, CA 90014</address><div class="visit-links"><a class="button" href="https://www.google.com/maps/dir/?api=1&destination=608+S+Hill+St+%231012%2C+Los+Angeles%2C+CA+90014" target="_blank" rel="noopener">Get directions <span class="arrow" aria-hidden="true">↗</span></a><a class="button light" href="tel:+16265103734">(626) 510-3734</a></div></div>
+        <div class="address-art"><p class="street">Downtown Los Angeles</p><strong>608<br>South Hill<br>Street</strong><a href="https://www.google.com/maps/dir/?api=1&destination=608+S+Hill+St+%231012%2C+Los+Angeles%2C+CA+90014" target="_blank" rel="noopener">Open in Maps <span class="arrow" aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-row"><p>© <span id="year">2026</span> Izmirlian Jewelry · Downtown Los Angeles</p><div class="footer-links"><a href="tel:+16265103734">Call</a><a href="https://www.etsy.com/shop/jewelsbychriss/?etsrc=sdt" target="_blank" rel="noopener">Etsy shop</a><a href="#top">Back to top ↑</a></div></div></footer>
+  <div class="mobilebar" aria-label="Quick actions"><a class="button" href="tel:+16265103734">Call the shop</a><a class="button light" href="https://www.etsy.com/shop/jewelsbychriss/?etsrc=sdt" target="_blank" rel="noopener">Shop Etsy</a></div>
+</body>
+</html>
