@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Izmirlian Jewelry hallmark</title>
+  <path d="M10 7.5h28l6 9-20 24-20-24 6-9Z" stroke="#183fc5" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M4 16.5h40M10 7.5l4 9 10 24 10-24 4-9M14 16.5h20" stroke="#183fc5" stroke-width="1" stroke-linejoin="round"/>
+  <path d="M22 21h4M24 21v11M22 32h4" stroke="#b58b4b" stroke-width="1.6" stroke-linecap="square"/>
+  <path d="m24 2 1.2 2.1L27.5 5l-2.3.9L24 8l-1.2-2.1L20.5 5l2.3-.9L24 2Z" fill="#b58b4b"/>
+</svg>
