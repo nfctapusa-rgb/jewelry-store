@@ -32,8 +32,11 @@
     .notice { min-height: 34px; display: flex; align-items: center; justify-content: center; padding: 5px 16px; background: var(--blue); color: var(--white); text-align: center; font-size: 11px; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; }
     header { position: sticky; z-index: 10; top: 0; background: rgb(242 243 241 / 96%); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
     .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .wordmark { display: flex; align-items: center; gap: 11px; font-size: 14px; font-weight: 750; letter-spacing: .035em; }
-    .mark { width: 32px; height: 32px; display: grid; place-items: center; border: 1px solid var(--blue); color: var(--blue); font-size: 14px; font-weight: 600; }
+    .wordmark { display: flex; align-items: center; gap: 10px; }
+    .brand-logo { width: 38px; height: 38px; flex: 0 0 38px; }
+    .brand-name { display: flex; flex-direction: column; gap: 3px; line-height: 1; text-transform: uppercase; }
+    .brand-name strong { font-size: 12px; font-weight: 720; letter-spacing: .13em; }
+    .brand-name small { color: var(--muted); font-size: 8px; font-weight: 650; letter-spacing: .28em; }
     nav { display: flex; align-items: center; gap: clamp(18px, 3vw, 40px); font-size: 13px; font-weight: 550; }
     .nav-cta, .button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 11px 17px; border: 1px solid var(--blue); color: var(--white); background: var(--blue); font-size: 13px; font-weight: 650; transition: background-color .16s ease, color .16s ease; }
     .nav-cta:hover, .button:hover { color: var(--white); background: var(--blue-dark); border-color: var(--blue-dark); }
@@ -69,6 +72,8 @@
     .product-card { min-width: 0; display: flex; flex-direction: column; border-top: 1px solid var(--line); }
     .product-photo { display: block; aspect-ratio: 1; overflow: hidden; background: var(--paper); }
     .product-photo img { width: 100%; height: 100%; object-fit: contain; transition: transform .22s ease; }
+    .product-photo img[src*="18-rose-gold-double-band-diamond-accent"],
+    .product-photo img[src*="21-two-stone-diamond-twist-white-gold-752"] { object-fit: cover; }
     .product-card:hover .product-photo img { transform: scale(1.035); }
     .product-meta { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; padding-top: 12px; }
     .product-name { max-width: 250px; margin: 0; font-size: 14px; font-weight: 620; line-height: 1.35; }
@@ -166,7 +171,7 @@
   <div class="notice">Downtown Los Angeles · Jewelry District · Suite 1012</div>
   <header>
     <div class="wrap nav">
-      <a class="wordmark" href="#top" aria-label="Izmirlian Jewelry home"><span class="mark" aria-hidden="true">I</span><span>IZMIRLIAN JEWELRY</span></a>
+      <a class="wordmark" href="#top" aria-label="Izmirlian Jewelry home"><img class="brand-logo" src="assets/izmirlian-jewelry-mark.svg" alt=""><span class="brand-name"><strong>Izmirlian</strong><small>Jewelry</small></span></a>
       <nav aria-label="Main navigation"><a href="#work">Custom work</a><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a></nav>
       <a class="nav-cta" href="tel:+16265103734">Call the shop <span class="arrow" aria-hidden="true">↗</span></a>
     </div>
