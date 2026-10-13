@@ -38,11 +38,11 @@
   const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 
   function cardHTML(p, i) {
-    return `<button class="card" data-i="${i}" aria-label="${esc(p.name)}, ${money(p.price)}. View details">
+    return `<a class="card" href="${p.url}" target="_blank" rel="noopener" data-i="${i}" aria-label="${esc(p.name)}, ${money(p.price)}. Buy on Etsy">
       <span class="ph"><img src="${p.img}" alt="" loading="lazy" class="${p.cover ? 'cover' : ''}"><span class="tag">${METAL[p.metal]}</span></span>
       <span class="name">${esc(p.name)}</span>
       <span class="meta"><span>${TYPE[p.type]}</span><span>${money(p.price)}</span></span>
-    </button>`;
+    </a>`;
   }
 
   /* Product detail dialog, injected once per page */
@@ -90,15 +90,8 @@
     document.getElementById('pd-buy').href = p.url;
     if (!dlg.open) dlg.showModal();
   }
-  /* Wire a grid so clicking a card opens the dialog over the given list */
-  function bindGrid(grid, getList) {
-    grid.addEventListener('click', e => {
-      const c = e.target.closest('.card');
-      if (!c) return;
-      list = getList();
-      show(+c.dataset.i);
-    });
-  }
+  /* Each card is a link straight to its Etsy listing, so there is nothing to wire */
+  function bindGrid() {}
 
   /* Header menu, call link and footer year: shared by every page */
   function initChrome() {
