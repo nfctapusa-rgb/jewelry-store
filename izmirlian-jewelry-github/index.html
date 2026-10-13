@@ -295,6 +295,7 @@
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    main { overflow-x: clip; }
     body { margin: 0; background: var(--white); color: var(--ink); font: 400 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
     a { color: inherit; }
     img { display: block; max-width: 100%; height: auto; }
@@ -316,7 +317,7 @@
 
     /* Wordmark echoes the logo: spaced capitals over an italic "by chris" */
     .logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
-    .logo-mono { width: 50px; height: 55px; overflow: visible; }
+    .logo-mono { width: 60px; height: 66px; overflow: visible; }
     .logo-words { display: flex; flex-direction: column; align-items: center; line-height: 1; }
     .logo-name { font-family: "Cinzel", var(--serif); font-size: 27px; font-weight: 500; letter-spacing: .3em; margin-right: -.3em; background: linear-gradient(120deg, #a87b33, #d9b56b 45%, #f3dfa8 52%, #c79a4c 62%, #9c7130) 0 0 / 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: gold-sweep 7s 1.2s ease-in-out infinite; }
     .logo-by { display: flex; align-items: center; gap: 8px; margin-top: 6px; font-family: "Cinzel", var(--serif); font-size: 10.5px; letter-spacing: .32em; color: #a8803d; text-transform: uppercase; }
@@ -483,7 +484,8 @@
       body { font-size: 16px; }
       .wrap { width: calc(100% - 32px); }
       .tray { margin-inline: -16px; padding-inline: 16px; scroll-padding-inline: 16px; }
-      .logo-mono { width: 40px; height: 44px; }
+      .logo-mono { width: 50px; height: 55px; }
+      .reels { margin-inline: -16px; padding: 0 16px 8px; }
       .logo-name { font-size: 21px; }
       .logo-by { font-size: 9px; }
       .rings { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 14px; }
@@ -506,22 +508,22 @@
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <defs>
-      <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1" spreadMethod="repeat">
         <stop offset="0" stop-color="#a87b33"/>
         <stop offset=".45" stop-color="#d9b56b"/>
         <stop offset=".55" stop-color="#f3dfa8"/>
         <stop offset=".7" stop-color="#c79a4c"/>
         <stop offset="1" stop-color="#9c7130"/>
-        <animateTransform class="shimmer" attributeName="gradientTransform" type="translate" values="-1 -1; 1 1; 1 1" keyTimes="0; .22; 1" dur="7s" begin="1.2s" repeatCount="indefinite"/>
+        <animateTransform class="shimmer" attributeName="gradientTransform" type="translate" values="0 0; 0 0; 1 1" keyTimes="0; .72; 1" dur="7s" begin="0s" repeatCount="indefinite"/>
       </linearGradient>
       <linearGradient id="gold-base" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0" stop-color="#a87b33"/><stop offset=".5" stop-color="#cfa75c"/><stop offset="1" stop-color="#9c7130"/>
       </linearGradient>
       <!-- Monogram: tall J laid over a fine C, with a cut diamond in the C's opening (after the Instagram logo) -->
       <symbol id="monogram" viewBox="0 0 100 110">
-        <text class="m-c" x="58" y="88" text-anchor="middle" font-family="'Bodoni Moda', Didot, serif" font-size="92" font-weight="400" fill="url(#gold)">C</text>
-        <text class="m-j" x="44" y="80" text-anchor="middle" font-family="'Bodoni Moda', Didot, serif" font-size="104" font-weight="500" fill="url(#gold)">J</text>
-        <g class="m-diamond" fill="none" stroke="url(#gold)" stroke-width="1.6" stroke-linejoin="round" transform="translate(63 48)">
+        <text class="m-c" x="60" y="90" text-anchor="middle" font-family="'Bodoni Moda', Didot, serif" font-size="88" font-weight="500" style="font-variation-settings:'opsz' 11" fill="url(#gold)">C</text>
+        <text class="m-j" x="40" y="80" text-anchor="middle" font-family="'Bodoni Moda', Didot, serif" font-size="104" font-weight="600" style="font-variation-settings:'opsz' 11" fill="url(#gold)">J</text>
+        <g class="m-diamond" fill="none" stroke="url(#gold)" stroke-width="2.2" stroke-linejoin="round" transform="translate(66 50) scale(.8)">
           <path pathLength="1" d="M7 0H25L32 8L16 26L0 8Z"/>
           <path pathLength="1" d="M0 8H32M7 0L11 8L16 26M25 0L21 8L16 26M11 8L16 0L21 8"/>
         </g>
