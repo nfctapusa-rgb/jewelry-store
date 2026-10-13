@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | Jewels by Chris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink: #0f0f0f; --stone: #efeeeb; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 500 15px/1.6 Manrope, "Helvetica Neue", Arial, sans-serif; letter-spacing: .02em; color: var(--ink); }
+    a { color: inherit; text-decoration: none; }
+    h1, p { margin: 0; }
+    .title { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .lede { max-width: 46ch; color: rgb(15 15 15 / 75%); }
+    .btn { display: inline-flex; align-items: center; min-height: 46px; padding: 12px 26px; border: 1px solid var(--ink); background: var(--ink); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .btn.ghost { background: transparent; color: var(--ink); }
+    .nf { min-height: 100vh; display: grid; place-content: center; justify-items: center; gap: 22px; padding: 40px 16px; text-align: center; background: var(--stone); }
+    .nf svg { width: 56px; height: 78px; }
+    .nf .row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <main class="nf">
+    <svg viewBox="0 0 64 88" fill="none" stroke="#0f0f0f" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="M44 17A22 33 0 1 0 44 71"/><path d="M50 4v58c0 13-7 22-18 22-6 0-10-2.5-13-6.5"/><path d="M44 4h12"/></svg>
+    <h1 class="title">Page not found</h1>
+    <p class="lede">This page doesn’t exist or has moved. Head back to the homepage or browse the rings.</p>
+    <div class="row"><a class="btn" data-href="">Go to the homepage</a><a class="btn ghost" data-href="collection.html">Shop rings</a></div>
+  </main>
+  <script>
+    // Works at a domain root (Vercel) and under a GitHub Pages project path
+    const seg = location.pathname.split('/')[1];
+    const base = location.hostname.endsWith('github.io') && seg ? '/' + seg + '/' : '/';
+    document.querySelectorAll('[data-href]').forEach(a => a.href = base + a.dataset.href);
+  </script>
+</body>
+</html>
