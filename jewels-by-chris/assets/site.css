@@ -43,7 +43,7 @@ header { position: sticky; top: 0; z-index: 30; background: rgb(255 255 255 / 97
 .bar nav a:hover { border-color: var(--ink); }
 .bar .right { justify-content: flex-end; }
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand svg { width: 26px; height: 36px; }
+.brand img { width: auto; height: 40px; }
 .brand span { font-size: 13px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; white-space: nowrap; }
 .menu-btn { display: none; background: none; border: 0; padding: 8px 0; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
 .drawer { display: none; }
@@ -167,7 +167,7 @@ address { font-style: normal; font-size: 16px; line-height: 1.7; }
 /* Footer */
 footer { background: var(--ink); color: rgb(255 255 255 / 75%); padding: clamp(56px, 8vw, 100px) var(--gutter) calc(28px + env(safe-area-inset-bottom)); }
 .foot-mark { display: flex; flex-direction: column; align-items: center; gap: 18px; color: var(--white); margin-bottom: clamp(48px, 7vw, 88px); }
-.foot-mark svg { width: clamp(70px, 9vw, 112px); height: auto; }
+.foot-mark img { width: clamp(180px, 22vw, 260px); height: auto; }
 .foot-mark span { font-size: 13px; font-weight: 700; letter-spacing: .3em; text-transform: uppercase; }
 .foot-cols { display: grid; grid-template-columns: repeat(3, 1fr) 1.3fr; gap: 32px; padding-bottom: 40px; border-bottom: 1px solid var(--night-line); }
 .foot-cols h3 { color: var(--white); margin-bottom: 14px; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
