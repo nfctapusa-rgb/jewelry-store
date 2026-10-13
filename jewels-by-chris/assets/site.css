@@ -314,12 +314,3 @@ footer { background: var(--ink); color: rgb(255 255 255 / 75%); padding: clamp(5
 .review-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 36px; }
 .review-links .btn { gap: 10px; }
 .review-links img { width: 20px; height: 20px; }
-
-/* Gold JC monogram and JEWELS / BY CHRIS wordmark (after the Instagram logo) */
-.brand { gap: 10px; }
-.brand svg { width: 44px; height: 48px; overflow: visible; }
-.brand .words { display: flex; flex-direction: column; align-items: center; line-height: 1; }
-.brand .name { font-family: "Cinzel", serif; font-size: 22px; font-weight: 500; letter-spacing: .3em; margin-right: -.3em; background: linear-gradient(120deg, #a87b33, #d9b56b 45%, #f3dfa8 52%, #c79a4c 62%, #9c7130); -webkit-background-clip: text; background-clip: text; color: transparent; text-transform: uppercase; }
-.brand .by { display: flex; align-items: center; gap: 7px; margin-top: 5px; font-family: "Cinzel", serif; font-size: 9px; font-weight: 500; letter-spacing: .32em; color: #a8803d; text-transform: uppercase; }
-.brand .by::before, .brand .by::after { content: ""; width: 14px; height: 1px; background: currentColor; opacity: .7; }
-@media (max-width: 860px) { .brand svg { width: 36px; height: 40px; } .brand span.words { display: flex; } .brand span.name { display: block; } .brand span.by { display: flex; } .brand .name { font-size: 17px; } .brand .by { font-size: 8px; } }
